@@ -37,18 +37,11 @@ Zialiel uses ML-DSA (Dilithium) – the NIST‑standardised post‑quantum signa
 
 **Implementation:** `RealMLDSAService` wraps the liboqs library and provides key generation, signing, and verification using the official NIST parameter sets (ML‑DSA‑44, ML‑DSA‑65, etc.).
 
-### 🔐 ZKP-STARK & ZK-SNARKs (Zero-Knowledge Proofs)
-Zialiel implements both STARKs and SNARKs for privacy-preserving verification:
+**Zialiel implements ZKP STARKs (Zero Knowdledge Proof Scalable Transparent Arguments of Knowledge)**
 
-**STARKs (Scalable Transparent ARguments of Knowledge)**
-- No trusted setup – Transparent and post-quantum secure
-- Scalable – Proof sizes grow logarithmically with computation size
-- Used for: Asset ownership proofs (land, vehicles, properties), membership verification
-
-**SNARKs (Succinct Non-interactive ARguments of Knowledge)**
-- Succinct – Tiny proof sizes (under 1KB)
-- Fast verification – Millisecond verification times
-- Used for: Humanity proofs, age verification, credential claims
+- Scalable – Proof sizes grow logarithmically with computation size, or in other words, prove any transparent information on any scale without revealing personal information
+-  Trusted setup – Transparent and post-quantum secure
+- Used for: 2FA Authentication, asset ownership proofs (land, vehicles, properties), DAO creation, membership verification.
 
 **Real-World Applications**
 
@@ -58,9 +51,9 @@ Zialiel implements both STARKs and SNARKs for privacy-preserving verification:
 | Vehicle Registration | STARK | Prove vehicle ownership without revealing VIN |
 | Property Valuation | STARK | Prove property value range without revealing exact amount |
 | No Liens Proof | STARK | Prove property has no debt against it |
-| Humanity Proof | SNARK | Prove you're human without revealing identity |
-| Age Verification | SNARK | Prove you're over 18 without revealing birth date |
-| Credential Claims | SNARK | Prove you have a license without revealing license number |
+| Humanity Proof | STARK | Prove you're human without revealing identity |
+| Age Verification | STARK | Prove you're over 18 without revealing birth date |
+| Credential Claims | STARK | Prove you have a license without revealing license number |
 
 ### 🔐 2FA Registry & Seed Phrase Backup (BIP39)
 Zialiel implements a multi-factor authentication registry and BIP39 seed phrase backup for wallet recovery:
@@ -85,9 +78,9 @@ Consensus is reached through QDBFT (Quantum‑Resistant Delegated Byzantine Faul
 ### ⚡ Avalanche Consensus for Ultra-Fast Transactions
 Zialiel uses Avalanche Consensus for transaction acceptance, providing:
 - 1-2 second confirmation times
-- 5,000+ TPS (tested and proven)
-- Auto-scaling sharding - TPS scales linearly with validators
-
+- 5,000+ TPS Per Node(tested and proven)
+- Auto-scaled sharding - TPS scales by 5000+TPS with every active node. (capped at 40 nodes for a maximum current of 200,000TPS per second)
+  
 ### 💰 Economic Models (Fee Distribution & UBI)
 
 #### Fee Distribution (Updated)
@@ -97,10 +90,10 @@ Zialiel uses Avalanche Consensus for transaction acceptance, providing:
 | **UBI Pool** | 35% | Universal Basic Income for verified humans |
 | **Validator Rewards** | 15% | Validators with 1000+ ZIAL stake |
 | **Full Node Rewards** | 10% | Anyone running a full node (0 ZIAL stake) |
-| **Treasury Reserve** | 20% | Community treasury for grants and development |
 | **Loan Treasury** | 20% | Rent-free loans (0% interest) |
+| **Treasury Reserve** | 20% | Community treasury for grants and development |
 
-**Transaction Fee:** 0.00001 ZIAL (fixed, never changes)
+**On-Chain Transaction Fee:** 0.00001 ZIAL (fixed, never changes)
 
 #### Universal Basic Income (UBI)
 - **Eligibility:** Verified human with wallet balance < $500 USD
@@ -189,7 +182,7 @@ Register physical assets with legally binding proof:
 | DAO | @name.dao | @artist.dao |
 | Non-profit | @name.nonprofit | @climate.nonprofit |
 
-### 🔄 Cross-Chain Bridge (53+ Chains)
+### 🔄 Cross-Chain Bridge (32 Chains)
 
 | Chain Type | Examples |
 |------------|----------|
@@ -473,7 +466,7 @@ We have created:
 
 ✅ Auto-scaling sharding – TPS grows with validators
 
-✅ STARK/SNARK zero-knowledge proofs for privacy
+✅ STARK zero-knowledge proofs for privacy
 
 ✅ BIP39 seed phrase backup – 12-word recovery
 
