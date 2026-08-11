@@ -1,7 +1,7 @@
-**🌌 Zialiel Protocol**
+#🌌 Zialiel Protocol**
 
 
-A Quantum-Resistant, Participant-First, Self-Evolving Blockchain guided by 7 Universal Principles
+##A Quantum-Resistant, Self-Evolving Blockchain built as a societal operating system
 
 https://img.shields.io/badge/License-MIT-yellow.svg
 https://img.shields.io/badge/python-3.14+-blue.svg
