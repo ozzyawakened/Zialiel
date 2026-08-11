@@ -1,7 +1,5 @@
-# 🌌 Zialiel Protocol
-
-### A Quantum-Resistant, Participant-First, Self-Evolving Blockchain with 7-Fold Recursive Wisdom
-
+#🌌 Zialiel Protocol
+####A Quantum-Resistant, Participant-First, Self-Evolving Blockchain with 7-Fold Recursive Wisdom
 https://img.shields.io/badge/License-MIT-yellow.svg
 https://img.shields.io/badge/python-3.14+-blue.svg
 https://img.shields.io/badge/status-100%2525%2520complete-brightgreen.svg
@@ -58,20 +56,20 @@ text
 │  Parameters: ML‑DSA‑44, ML‑DSA‑65 (NIST official)             │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
-🔐 ZK-STARKs Only (No SNARKs)
-Zialiel uses ZK-STARKs exclusively for privacy-preserving verification. SNARKs were removed because they rely on elliptic curve cryptography and are vulnerable to quantum attacks.
+🔐 ZK-STARKs
+Zialiel uses ZK-STARKs (Zero-Knowledge Scalable Transparent Arguments of Knowledge) for privacy-preserving verification:
 
 text
 ┌─────────────────────────────────────────────────────────────────┐
-│              ZK-STARKs vs SNARKs (Removed)                     │
-├─────────────────────────┬───────────────────┬───────────────────┤
-│ Property                │ STARKs            │ SNARKs (Removed)  │
-├─────────────────────────┼───────────────────┼───────────────────┤
-│ Quantum-Resistant       │ ✅ Yes            │ ❌ No             │
-│ Trusted Setup           │ ❌ No             │ ✅ Yes (vuln)     │
-│ Proof Size              │ Logarithmic       │ Constant          │
-│ Post-Quantum Security   │ ✅ Yes            │ ❌ No             │
-└─────────────────────────┴───────────────────┴───────────────────┘
+│                      ZK-STARKs FEATURES                         │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ✅ Quantum-Resistant – Based on hash functions                │
+│  ✅ No Trusted Setup – Transparent and auditable               │
+│  ✅ Scalable – Proof sizes grow logarithmically                │
+│  ✅ Post-Quantum Secure – Resistant to quantum attacks         │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
 Real-World Applications:
 
 text
@@ -88,8 +86,6 @@ text
 │  Credential Claims        → Prove license w/o license number   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
-Note: ZK-STARKs are NOT used for anonymous voting. All votes are transparent and publicly linked to verified human DIDs to prevent malicious manipulation.
-
 🔐 2FA Registry & Seed Phrase Backup (BIP39)
 text
 ┌─────────────────────────────────────────────────────────────────┐
@@ -202,6 +198,7 @@ text
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 How It Works:
+
 text
 ┌─────────────────────────────────────────────────────────────────┐
 │                   QUANTUM CARD SETUP                            │
@@ -216,6 +213,7 @@ text
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 Real Examples – ALWAYS THE SAME!
+
 text
 ┌─────────────────────────────────────────────────────────────────┐
 │                    QUANTUM CARD FEES                            │
@@ -256,15 +254,12 @@ text
 │                   VOTING MECHANISM                              │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ✅ No anonymous voting – All voters are identified             │
-│  ✅ No Sybil attacks – Each human has one vote                 │
-│  ✅ Full accountability – All votes are publicly verifiable    │
-│  ✅ Immutable record – Votes cannot be altered after           │
-│     submission                                                  │
+│  ✅ All votes are publicly visible and auditable               │
+│  ✅ Each vote is linked to a verified human DID                │
+│  ✅ One vote per human – Sybil-resistant                       │
+│  ✅ Immutable record – Votes cannot be altered                 │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
-Why no anonymous voting? Anonymous voting can be manipulated by malicious actors. By making all votes transparent and linked to verified humans, we ensure the integrity of our governance system while still protecting personal privacy through our ZK-STARK-based humanity verification.
-
 🎨 Multiple DAOs for Creators & Communities
 text
 ┌─────────────────────────────────────────────────────────────────┐
@@ -443,7 +438,7 @@ text
 │  ────────────────────────────────────────────────────────────── │
 │  Core Blockchain        Python 3.14+, liboqs (ML-DSA)          │
 │  Consensus              Avalanche + QDBFT                       │
-│  Zero-Knowledge Proofs  STARKs only (quantum-safe)             │
+│  Zero-Knowledge Proofs  STARKs (quantum-safe)                  │
 │  Database               Redis (caching), LedgerState           │
 │  Storage                LevelDB (persistence)                  │
 │  AI Models              DeepSeek, PublicAI                     │
@@ -546,7 +541,7 @@ text
 │ vertex.py                  │ ✅ COMPLETE                       │
 │ shard_manager.py           │ ✅ COMPLETE (auto-scaling)        │
 └────────────────────────────┴───────────────────────────────────┘
-✅ ZERO-KNOWLEDGE PROOFS (STARKs Only)
+✅ ZERO-KNOWLEDGE PROOFS (STARKs)
 text
 ┌─────────────────────────────────────────────────────────────────┐
 │                 ZERO-KNOWLEDGE PROOFS (STARKs)                  │
@@ -735,8 +730,7 @@ text
 │  ✅ 2FA registry – Biometric + TOTP authentication             │
 │  ✅ STARK proofs for land, vehicles, and property              │
 │  ✅ Full node rewards (10% of fees – 0 ZIAL stake!)            │
-│  ✅ Transparent, accountable governance – no anonymous         │
-│     voting                                                     │
+│  ✅ Transparent, accountable governance                        │
 │  ✅ No EVM needed – Everything is native Python                │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
