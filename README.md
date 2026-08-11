@@ -492,7 +492,7 @@ curl http://localhost:5001/api/full-node/pool
 | ZialDEX | ✅ COMPLETE |
 | dex_integration.py | ✅ COMPLETE |
 | dex_wallet_integration.py | ✅ COMPLETE |
-| cross_chain_swap.py | ✅ COMPLETE (53 chains) |
+| cross_chain_swap.py | ✅ COMPLETE (32 chains) |
 
 ### ✅ DAOs
 
